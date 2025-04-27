@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CityCare Hospital Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CityCare Hospital</h1>
+        <nav>
+            <ul>
+                <li><a href="#patient-section">Patient Registration</a></li>
+                <li><a href="#doctor-section">Doctors</a></li>
+                <li><a href="#appointment-section">Appointments</a></li>
+                <li><a href="#equipment-section">Facilities</a></li>
+                <li><a href="#about-section">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Patient Registration -->
+        <section id="patient-section" class="card">
+            <h2>Patient Registration</h2>
+            <form id="patient-form">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" required>
+                        <option value="">Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Transgender">Transgender</option>
+                        <option value="Prefer not to say">Prefer not to say</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="contact">Contact:</label>
+                    <input type="tel" id="contact" required>
+                </div>
+                <div class="form-group">
+                    <label for="language">Preferred Language (Optional):</label>
+                    <select id="language">
+                        <option value="">None</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="English">English</option>
+                        <option value="Bengali">Bengali</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Telugu">Telugu</option>
+                    </select>
+                </div>
+                <button type="submit">Register Patient</button>
+            </form>
+            <div id="patient-list" class="list-container"></div>
+        </section>
+
+        <!-- Doctor Dashboard -->
+        <section id="doctor-section" class="card">
+            <h2>Our Specialist Doctors</h2>
+            <table id="doctor-table">
+                <thead>
+                    <tr>
+                        <th>Doctor</th>
+                        <th>Specialization</th>
+                        <th>Availability</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dr. Rajesh Sharma</td>
+                        <td>Cardiology</td>
+                        <td>Mon-Fri, 9AM-5PM</td>
+                        <td>dr.sharma@citycare.com</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Priya Patel</td>
+                        <td>Neurology</td>
+                        <td>Mon-Sat, 10AM-4PM</td>
+                        <td>dr.patel@citycare.com</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Amit Kumar</td>
+                        <td>Orthopedics</td>
+                        <td>Tue-Sun, 8AM-2PM</td>
+                        <td>dr.kumar@citycare.com</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Ananya Reddy</td>
+                        <td>Pediatrics</td>
+                        <td>Mon-Sat, 9AM-6PM</td>
+                        <td>dr.reddy@citycare.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Appointment Booking -->
+        <section id="appointment-section" class="card">
+            <h2>Book Appointment</h2>
+            <form id="appointment-form">
+                <div class="form-group">
+                    <label for="patient-name">Patient Name:</label>
+                    <input type="text" id="patient-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="doctor">Doctor:</label>
+                    <select id="doctor" required>
+                        <option value="">Select Doctor</option>
+                        <option value="Dr. Rajesh Sharma (Cardiology)">Dr. Rajesh Sharma (Cardiology)</option>
+                        <option value="Dr. Priya Patel (Neurology)">Dr. Priya Patel (Neurology)</option>
+                        <option value="Dr. Amit Kumar (Orthopedics)">Dr. Amit Kumar (Orthopedics)</option>
+                        <option value="Dr. Ananya Reddy (Pediatrics)">Dr. Ananya Reddy (Pediatrics)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-date">Date:</label>
+                    <input type="date" id="appointment-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-time">Time:</label>
+                    <input type="time" id="appointment-time" required>
+                </div>
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+
+        <!-- Equipment Section -->
+        <section id="equipment-section" class="card">
+            <h2>Our Advanced Medical Facilities</h2>
+            <div class="equipment-grid">
+                <div class="equipment-card">
+                    <img src="https://www.siemens-healthineers.com/images/mri-scanner.jpg" alt="MRI Machine">
+                    <h3>3T MRI Scanner</h3>
+                    <ul>
+                        <li><strong>Model:</strong> Siemens Magnetom Vida</li>
+                        <li><strong>Field Strength:</strong> 3 Tesla</li>
+                        <li><strong>Applications:</strong> Neuro, Cardiac, Whole Body</li>
+                        <li><strong>Features:</strong> 70cm bore, Dot Engine</li>
+                    </ul>
+                </div>
+
+                <div class="equipment-card">
+                    <img src="https://www.gehealthcare.com/images/ct-scanner.jpg" alt="CT Scanner">
+                    <h3>128-Slice CT Scanner</h3>
+                    <ul>
+                        <li><strong>Model:</strong> GE Revolution EVO</li>
+                        <li><strong>Slices:</strong> 128</li>
+                        <li><strong>Rotation Time:</strong> 0.28 seconds</li>
+                        <li><strong>Applications:</strong> Trauma, Cardiac, Neuro</li>
+                    </ul>
+                </div>
+
+                <div class="equipment-card">
+                    <img src="https://www.philips.com/images/ultrasound-machine.jpg" alt="Ultrasound Machine">
+                    <h3>Digital Ultrasound System</h3>
+                    <ul>
+                        <li><strong>Model:</strong> Philips EPIQ 7</li>
+                        <li><strong>Probes:</strong> Convex, Linear, Endocavity</li>
+                        <li><strong>Applications:</strong> OB/GYN, Abdominal, Vascular</li>
+                        <li><strong>Features:</strong> Elastography, 3D/4D Imaging</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about-section" class="card">
+            <h2>About CityCare Hospital</h2>
+            <div class="hospital-info">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="CityCare Hospital Building">
+                <div class="hospital-details">
+                    <h3>Our Specialities</h3>
+                    <ul>
+                        <li>24/7 Emergency & Trauma Care</li>
+                        <li>200+ Bed Multi-Speciality Facility</li>
+                        <li>NABH Accredited Hospital</li>
+                        <li>Advanced Cardiac Care Unit</li>
+                        <li>Neonatal Intensive Care Unit (NICU)</li>
+                        <li>Modern Operation Theaters</li>
+                        <li>Fully Automated Laboratory</li>
+                    </ul>
+                    <h3>Contact Information</h3>
+                    <p><strong>Address:</strong> osmanpura , chh. Sambhaji nagar - 431005</p>
+                    <p><strong>Phone:</strong> +91 22 1234 5678</p>
+                    <p><strong>Emergency:</strong> +91 98765 43210</p>
+                    <p><strong>Email:</strong> info@citycarehospital.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 CityCare Hospital. All Rights Reserved.</p>
+        <p>Emergency: +91-9876543210 | Main: +91-2212345678</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
